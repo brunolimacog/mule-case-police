@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: bruno-mule-usecases-api-exp
+mediaType: 
+- application/json
+
+uses:
+  commonLibrary: !import /exchange_modules/a5f7ae0c-6a1e-41f7-a68b-525f441b99c9/common-resource/1.0.0/libraries/types.raml
+
+
+/status:
+  is: [commonLibrary.clientPolice]
+  get:
+    description: Available or Not Available
+    displayName: Get status from API
+    responses:
+      200:
+        body:
+          example:
+            {"status":"available","timestamp":"2021-08-14T02:02:55.447"}
+      401:
+        description: Unauthorized or invalid
+        body:
+          example:
+            {"error":"Unauthorized or invalid"}
+      404:
+        description: Resource not found
+        body:
+          example:
+            {"error":"resource not found"}
+      500:
+        description: Bad response from authorization server
+        body:
+          example:
+            {"error":"bad response from authorization server"}
+        
+          
+  
