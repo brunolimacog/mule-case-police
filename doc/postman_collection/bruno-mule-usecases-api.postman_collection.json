@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "97c7a17b-d40d-4484-b3e5-1de05640e191",
+		"name": "bruno-mule-usecases-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "b6ee9ca840474d5b89cac004469e44f4",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "afFD3B42f2E546609eE0994652004Aa4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://bruno-mule-usecases-api-exp-f8gfm2.rajrd4-2.usa-e1.cloudhub.io/api/status",
+					"protocol": "https",
+					"host": [
+						"bruno-mule-usecases-api-exp-f8gfm2",
+						"rajrd4-2",
+						"usa-e1",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"status"
+					]
+				},
+				"description": "Get status from api to see if it is avaible and the timestamp of request"
+			},
+			"response": []
+		}
+	]
+}
